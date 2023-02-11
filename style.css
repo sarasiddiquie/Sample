@@ -111,6 +111,37 @@ button.ghost {
     border-color: #fff;
 }
 
+
+#signUP {
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background: #ff445c;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+#signUp::placeholder{
+    color:#fff;
+}
+
+#signUP:active {
+    transform: scale(.95);
+}
+
+#signUP:focus {
+    outline: none;
+}
+
+#signUP.ghost {
+    background: transparent;
+    border-color: #fff;
+}
+
+
 .form-container {
     position: absolute;
     top: 0;
