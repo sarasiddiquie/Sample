@@ -1,31 +1,68 @@
 <html>
 <head>
-<title>Firebase Authentication</title>
+<title>Login</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 </head>
 
 <body>
   
-<div id="login-box">
-  <div class="left">
-    <h1 id='status'>Login</h1>
-    <input type="text" id="email" name="email" placeholder="E-mail" />
-    <input type="password" id="password" name="password" placeholder="Password" />
-    
-    <input type="submit" id='login' name="login" value="Login" />
-
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+      <form action="POST" action="/">
+          <h1>Create Account</h1>
+          <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email for registration</span>
+          <input type="text" placeholder="username" />
+          <input type="email" placeholder="email" />
+          <input type="password" placeholder="password" />
+          <button>Sign Up</button>
+      </form>
   </div>
-  
-  <div class="right">
-    <span class="loginwith">Sign in with<br />social network</span>
-    
-    <button class="social-signin facebook">Log in with facebook</button>
-    <button class="social-signin twitter">Log in with Twitter</button>
-    <button class="social-signin google">Log in with Google+</button>
+  <div class="form-container sign-in-container">
+      <form action="#">
+          <h1>Sign in</h1>
+          <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your account</span>
+          <input type="email" placeholder="email" />
+          <input type="password" placeholder="password" />
+          <a href="#">Forgot your password?</a>
+          <button id="login">Sign In</button>
+      </form>
   </div>
-  <div class="or">OR</div>
+  <div class="overlay-container">
+      <div class="overlay">
+          <div class="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <p>To keep connected with us please login with your personal info</p>
+              <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start journey with us</p>
+              <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+      </div>
+  </div>
 </div>
+
+<div class="footer">
+
 </body>
+
+<script src="login.js"></script>
 
 <script type="module">
 
